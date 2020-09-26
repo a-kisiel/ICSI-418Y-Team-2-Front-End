@@ -14,7 +14,7 @@ ul {
   overflow: hidden;
   background-color: rgb(28, 42, 42);
   color: blueviolet;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 10px 15px -6px black;
 }
 
 li {
@@ -48,6 +48,10 @@ h2 {
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   border-bottom: 3px solid transparent;
+}
+
+div {
+  margin-bottom: 20px;
 }
