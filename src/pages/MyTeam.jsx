@@ -3,40 +3,59 @@ import NavBar from "../components/NavBar";
 import "../styles/MyTeam.css";
 import ProgressBar from "../components/ProgressBar";
 import PlayerCard from "../components/PlayerCard";
-import {
-  Editable,
-  EditablePreview,
-  EditableInput,
-  Icon,
-  Button,
-  Tooltip,
-} from "@chakra-ui/core";
 
 const playersAvailable = [
-  { id: 1, name: "Daniel", rankingPoints: 100 },
-  { id: 2, name: "Robin", rankingPoints: 70 },
-  { id: 3, name: "Alex", rankingPoints: 68 },
-  { id: 4, name: "Sajjad", rankingPoints: 61 },
-  { id: 5, name: "Neethu", rankingPoints: 56 },
-  { id: 6, name: "Daren", rankingPoints: 37 },
-  { id: 7, name: "OneMorePlayer", rankingPoints: 75 },
-  { id: 8, name: "AnotherPlayer", rankingPoints: 43 },
-  { id: 9, name: "OneOtherPlayer", rankingPoints: 92 },
-  { id: 10, name: "SomeoneExtra", rankingPoints: 100 },
+  {
+    name: "Player 1",
+    rankingPoints: 100,
+  },
+  {
+    name: "Player 2",
+    rankingPoints: 70,
+  },
+  {
+    name: "Player 3",
+    rankingPoints: 68,
+  },
+  {
+    name: "Player 4",
+    rankingPoints: 61,
+  },
+  {
+    name: "Player 5",
+    rankingPoints: 56,
+  },
+  {
+    name: "Player 6",
+    rankingPoints: 37,
+  },
+  {
+    name: "Player 7",
+    rankingPoints: 75,
+  },
+  {
+    name: "Player 8",
+    rankingPoints: 83,
+  },
+  {
+    name: "Player 9",
+    rankingPoints: 92,
+  },
+  {
+    name: "Player 10",
+    rankingPoints: 100,
+  },
 ];
 
 function displayPlayerCards() {
   let players = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < players.length; i++) {
     players.push(
-      <div className="playerCardDiv">
-        <PlayerCard
-          name={playersAvailable[i].name}
-          rankingPoints={playersAvailable[i].rankingPoints}
-          id={playersAvailable[i].id}
-        />
-      </div>
+      <PlayerCard
+        name={playersAvailable[i].name}
+        rp={playersAvailable[i].rankingPoints}
+      />
     );
   }
 
@@ -51,21 +70,12 @@ export default function MyTeam(props) {
         <div className="teamImageCardContainer">
           <img
             className="TeamImage"
-            src="https://www.pngitem.com/pimgs/m/508-5088889_work-in-progress-logo-png-transparent-png.png"
+            src="https://www.w3schools.com/w3css/img_snowtops.jpg"
             alt="TeamImage"
             width="100%"
           />
           <div className="TeamDescription">
-            <h2>
-              <Editable
-                style={{ marginLeft: "5%", marginRight: "5%" }}
-                w="90%"
-                defaultValue={props.name}
-              >
-                <EditablePreview style={{ color: "white" }} />
-                <EditableInput style={{ color: "white" }} />
-              </Editable>
-            </h2>
+            <h2>{props.name}</h2>
             <hr style={{ border: "1px solid white" }} />
             <h2 style={{ margin: 0, padding: 0 }}>Team Status</h2>
             <ProgressBar
@@ -77,37 +87,9 @@ export default function MyTeam(props) {
           </div>
         </div>
         <div className="TeamPlayerSelection">
-          <div className="playerSelectionNav">
-            <Tooltip label="Save Changes" placement="bottom" bg="blue.500">
-              <Button className="SaveButton" variantColor="blue">
-                Save{" "}
-                <Icon
-                  marginLeft="0px"
-                  style={{ float: "left", marginLeft: "10px" }}
-                  name="check"
-                  size="28px"
-                  color="green.300"
-                />
-              </Button>
-            </Tooltip>
-            <Tooltip label="Cancel Changes" placement="bottom" bg="red.600">
-              <Button className="SaveButton" variantColor="red">
-                Cancel{" "}
-                <Icon
-                  marginLeft="0px"
-                  style={{ float: "left", marginLeft: "10px" }}
-                  name="not-allowed"
-                  size="28px"
-                  color="white"
-                />
-              </Button>
-            </Tooltip>
-          </div>
-          <div className="playerDivs">{displayPlayerCards()}</div>
+          <div className="playerSelectionNav">{displayPlayerCards()}</div>
         </div>
       </div>
     </div>
   );
 }
-
-/*<Icon name="warning" size="32px" color="red.500" />*/
