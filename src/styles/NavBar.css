@@ -1,3 +1,7 @@
+body {
+  background: rgb(24, 20, 20);
+}
+
 .NavBar {
   width: 100%;
 }
@@ -39,7 +43,7 @@ li:nth-last-child(2) {
   float: right;
 }
 
-h2 {
+.h2tagNav {
   background-color: rgb(28, 42, 42);
   font-family: Arial, Helvetica, sans-serif;
   float: left;

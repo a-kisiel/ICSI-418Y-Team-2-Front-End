@@ -17,17 +17,29 @@ const mockNews = [
     description:
       "News 3 description in full details. These news will only be posted by the admin of the platform.",
   },
+  {
+    title: "News 4",
+    description:
+      "News 4 description in full details. These news will only be posted by the admin of the platform.",
+  },
+  {
+    title: "News 5",
+    description:
+      "News 5 description in full details. These news will only be posted by the admin of the platform.",
+  },
 ];
 
 function generateAllMockNews() {
   let output = [];
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 5; i++) {
     output.push(
       <div className="news">
-        <h1>{mockNews[i].title}</h1>
-        <h3>{mockNews[i].description}</h3>
-        {i !== 2 ? <hr style={{ border: "2px solid rgb(53, 83, 83)" }} /> : null}
+        <div className="news-inner">
+          <h1 className="hTagLeagueNews">{mockNews[i].title}</h1>
+          <h3 className="hTagLeagueNews">{mockNews[i].description}</h3>
+        </div>
+        {i !== 4 ? <hr className="hrTagLeagueNews" /> : null}
       </div>
     );
   }

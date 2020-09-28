@@ -3,8 +3,8 @@ import "../styles/MainChat.css";
 
 export default function MainChat() {
   const [messagesList, setMessagesList] = useState([]);
-  const [currMessage, setCurrMessage] = useState("");
-  const [buttonState, setButtonState] = useState(false);
+  //const [currMessage, setCurrMessage] = useState("");
+  //const [buttonState, setButtonState] = useState(false);
 
   return (
     <div className="MainChatBox">

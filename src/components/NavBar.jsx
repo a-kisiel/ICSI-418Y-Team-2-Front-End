@@ -7,22 +7,22 @@ export default function NavBar() {
       <nav>
         <ul>
           <li>
-            <h2>NBA PENGUIN</h2>
+            <h2 className="h2tagNav">NBA PENGUIN</h2>
           </li>
           <li>
-            <h2>My Team</h2>
+            <h2 className="h2tagNav">My Team</h2>
           </li>
           <li>
-            <h2>My Tournaments</h2>
+            <h2 className="h2tagNav">My Tournaments</h2>
           </li>
           <li>
-            <h2>Contact Us</h2>
+            <h2 className="h2tagNav">Contact Us</h2>
           </li>
           <li>
-            <h2>Profile</h2>
+            <h2 className="h2tagNav">Profile</h2>
           </li>
           <li>
-            <h2>Login/Register</h2>
+            <h2 className="h2tagNav">Login/Register</h2>
           </li>
         </ul>
       </nav>
